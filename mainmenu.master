@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+	<div id="wrapper">
+		<div id="top">
+		</div>
+		<div id="content">
+			<div id="header">
+			    Flight Booking System</div>
+            <div id="welcomelabel" style="padding-left:15px; width: 194px;float: left;">Welcome! <%Response.Write(Interaction.LoggedInUser == null?"guest":Interaction.LoggedInUser.FirstName + " " + Interaction.LoggedInUser.LastName);%>
+            </div>			
+            <div id="navigate" style="float:left; padding-left: 10px;">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                    <CurrentNodeStyle ForeColor="Black" />
+                </asp:SiteMapPath>
+            </div>    
+            <div style="clear:both;"></div>
+			<div id="menu">
+<asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ImageSet="Arrows">
+                        <ParentNodeStyle Font-Bold="False" />
+                        <HoverNodeStyle Font-Underline="False" ForeColor="#5555DD" />
+                        <SelectedNodeStyle Font-Underline="False" ForeColor="#5555DD" Font-Bold="True" />
+                        <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+                            NodeSpacing="0px" VerticalPadding="0px" />
+                    </asp:TreeView>
+			</div>
+			<div id="stuff">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+			    
+			</div>
+		</div>
+		<div id="bottom">
+		</div>
+	</div>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />	
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode title="Home"  description="">
+		<siteMapNode url="~/login.aspx" title="Login"  description=""/>
+		<siteMapNode url="~/register.aspx" title="Register"  description="" />
+      <siteMapNode url="~/searchandbook.aspx" title="Book Flight"></siteMapNode>
+      <siteMapNode url="~/personalinfo.aspx" title="Personal Info"/>
+    <siteMapNode url="~/viewticket.aspx" title="View Ticket"></siteMapNode>
+      <siteMapNode title="Agent Access"  description="">
+        <siteMapNode url="~/exchangeflight.aspx" title="Exchange Flight"></siteMapNode>
+        <siteMapNode url="~/edituser.aspx" title="Edit User"></siteMapNode>
+      </siteMapNode>
+		<siteMapNode title="Admin Access"  description="">
+			<siteMapNode url="~/addagent.aspx" title="Add Agent"></siteMapNode>
+      <siteMapNode title="Flight Management">
+			  <siteMapNode url="~/addflight.aspx" title="Add Flight"></siteMapNode>
+			  <siteMapNode url="~/searchandbook.aspx?editremove=1" title="Edit/Remove Flight"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="User Management">
+        <siteMapNode url="~/edituseradmin.aspx" title="Admin Edit User"></siteMapNode>
+        <siteMapNode url="~/removeaccount.aspx" title="Remove Account"></siteMapNode>
+        <siteMapNode url="~/resetpass.aspx" title="Reset Password"></siteMapNode>
+      </siteMapNode>  
+		</siteMapNode>
+      <siteMapNode url="~/logout.aspx" title="Log Out"></siteMapNode>      
+    </siteMapNode>
+</siteMap>
